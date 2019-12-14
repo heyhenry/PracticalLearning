@@ -3,31 +3,34 @@ import random
 randomNumber = random.randint(1, 10)
 randomNumber = str(randomNumber)
 
-print('Welcome to the guessing game!')
-username = input('Enter username: ')
+print('✯ Welcome to the guessing game ✯')
+username = input('✯ Enter username: ')
 
 guessesTaken = 0
 
-print(username, 'let the games begin!')
+print(username, 'is it? \nGreat name! \nOkay, the rules are simple.\n')
+print('⚘ You have 6 attempts. \n⚘ Enter a number ranging between 1 - 10. \n⚘ Heed the warnings after each attempt.\n')
 
 while guessesTaken < 6:
-    guess = input('Guess number')
+    guess = input('Guess the number:')
     guess = str(guess)
 
     guessesTaken += 1
 
     if guess < randomNumber:
-        print("Go higher..")
+        print("A little higher...")
 
     elif guess > randomNumber:
-        print("Go lower..")
+        print("A little lower...")
 
     elif guess == randomNumber:
-        print("Congratulations")
+        print("\nCongratulations! You guessed it right!")
         break
 
-    else:
-        print('Ran outta tries. The number was ', randomNumber)
-        break
+if guess != randomNumber:
+    print('\nOh no! You ran out of attempts. The correct number was', randomNumber + '.\n')
 
-print('Random: ', randomNumber, '\nGuess: ', guess, '\nAttempts: ', guessesTaken)
+print('Taking you to the stats screen now...\n')
+print('\nStats: ')
+print('The actual number: ', randomNumber, '\nLast guess: ', guess, '\nAttempts taken: ', guessesTaken)
+print('\nThank you. Come again ( ͡👁️ ͜ʖ ͡👁️)✊!')
