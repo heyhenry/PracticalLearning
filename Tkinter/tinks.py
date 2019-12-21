@@ -24,6 +24,7 @@
 #
 # window.mainloop()
 
+
 # # Combo Box widget
 # from tkinter import *
 # from tkinter.ttk import *
@@ -38,6 +39,7 @@
 # combo.current(0) # Set the selected item
 # combo.grid(column=1, row=0)
 # window.mainloop()
+
 
 # # Check button widget
 # from tkinter import *
@@ -55,6 +57,7 @@
 # chk = Checkbutton(window, text='Choose', var=chk_state)
 # chk.grid(column=0, row=0)
 # window.mainloop()
+
 
 # # Radio button widget
 # from tkinter import *
@@ -80,6 +83,7 @@
 # btn.grid(column=4, row=0)
 # window.mainloop()
 
+
 # # ScrolledText widget
 # from tkinter import *
 # from tkinter import scrolledtext
@@ -96,6 +100,7 @@
 #
 # window.mainloop()
 
+
 # # Message Box Widget
 # from tkinter import *
 # from tkinter import messagebox
@@ -104,6 +109,17 @@
 # window.title("Welcome to Tinks4Fun app")
 # window.geometry('450x300')
 #
+# # # Different types of message boxes
+# # messagebox.showwarning('Message title', 'Show Warning')
+# # messagebox.showerror('Message title', 'Show Error')
+# # messagebox.showinfo('Message title', 'Show Info')
+# # res = messagebox.askquestion('Message title', 'Ask Question')
+# # res = messagebox.askyesno('Message title', 'Ask Yes No')
+# # res = messagebox.askyesnocancel('Message title', 'Ask Yes No Cancel')
+# # res = messagebox.askokcancel('Message title', 'Ask Ok Cancel')
+# # res = messagebox.askretrycancel('Message title', 'Ask Retry Cancel')
+#
+#
 # def clicked():
 #     messagebox.showinfo("This is the message box title", "Hey, this is the content of the message box!")
 #
@@ -111,3 +127,60 @@
 # btn.grid(column=0, row=0)
 #
 # window.mainloop()
+
+
+# # Spin Box Widget
+# from tkinter import *
+#
+# window = Tk()
+# window.title("Welcome to Tinks4Fun")
+# window.geometry('450x300')
+#
+# spin = Spinbox(window, from_=0, to=100)
+# # # Specify numbers in Spinbox
+# # spin = Spinbox(window, values=(3, 8, 11), width=5)
+#
+# # # Set a default value for Spinbox and pass said value through textvariable parameter
+# # var = IntVar()
+# # var.set(36)
+# # spin = Spinbox(window, from_=0, to=40, width=5, textvariable=var)
+#
+# spin.grid(column=0, row=0)
+# window.mainloop()
+
+
+# # Progress Bar Widget
+# from tkinter import *
+# from tkinter.ttk import Progressbar
+# from tkinter import ttk
+#
+# window = Tk()
+# window.title("Welcome to Tinks4Fun")
+# window.geometry('450x300')
+# style = ttk.Style()
+# style.theme_use('default')
+# style.configure("green.Horizontal.TProgressbar", background='green')
+# bar = Progressbar(window, length=200, style="green.Horizontal.TProgressbar")
+# bar['value'] = 70
+# bar.grid(column=0, row=0)
+# window.mainloop()
+
+
+# # File Dialog Widget
+# from tkinter import filedialog
+#
+# file = filedialog.askopenfilename()
+#
+# # # For multiple files
+# # files = filedialog.askopenfilenames()
+#
+# # # For specific tile types
+# # file = filedialog.askopenfilename(filetypes = (("Text files", "*.txt"), ("all files", "*.*")))
+#
+# # # For directory
+# # dir = filedialog.askdirectory()
+#
+# # # For specific initial directory
+# # from os import path
+# # file = filedialog.askopenfilename(initialdir= path.dirname(__file__))
+
