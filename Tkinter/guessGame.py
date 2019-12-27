@@ -35,53 +35,34 @@ from tkinter import *
 from tkinter import Menu
 from tkinter import messagebox
 
-window = Tk()
-window.title('Welcome to the Games4Fun.')
-window.geometry('500x500')
 
-menu = Menu(window)
+def guessGame():
+    guess = int(answer.get())
+    print(guess)
 
-def randomNumbers():
-
-    window.withdraw()
-    global ng
-    ng = Tk()
-    ng.title("Numbers Game")
-    ng.geometry('500x500')
-    questionBox = Entry(ng, width=10)
-    questionBox.pack()
-    submit = Button(ng, text="Submit", command=randomNumbers)
-    submit.pack()
-
-    randomNo = random.randint(1, 10)
-
-    intro = Label(ng, text="Welcome to the Numbers game.")
-    intro.pack()
-    question = Label(ng, text="Guess a number between 1 - 10.")
-    question.pack()
-
-    guess = int(questionBox.get())
-
-    if guess == randomNo:
-        messagebox.showinfo("Numbers Game", "You guessed correctly!")
+    if guess < randomNo:
+        messagebox.showinfo("Fun Games Inc", "Higher...")
+        return True
+    elif guess > randomNo:
+        messagebox.showinfo("Fun Games Inc", "Lower...")
+        return True
+    elif guess == randomNo:
+        messagebox.showinfo("Fun Games Inc", "You guessed correctly!")
         return False
 
-    elif guess > randomNo:
-        messagebox.showinfo("Numbers Game", "Lower...")
-        return True
+window = Tk()
+window.title("Fun Games Inc")
+window.geometry('500x500')
 
-    elif guess < randomNo:
-        messagebox.showinfo("Numbers Game", "Higher...")
-        return True
+question = Label(window, text="Choose a number between 1 - 10.")
+question.pack()
 
+answer = Entry(window, width=10)
+answer.pack()
 
-game_item = Menu(menu, tearoff=0)
-game_item.add_command(label='Random Number', command=randomNumbers)
+guess = Button(window, text="Submit", command=guessGame)
+guess.pack()
 
-menu.add_cascade(labe='Int Games', menu=game_item)
-window.config(menu=menu)
+randomNo = random.randint(1, 10)
 
 window.mainloop()
-
-
-
