@@ -34,8 +34,12 @@ def Addition():
 
         firstNum = txt1.get()
         secondNum = txt2.get()
+
+        firstNum = int(firstNum)
+        secondNum = int(secondNum)
+
         ans = firstNum + secondNum
-        messagebox.showinfo('Answer: ', ans)
+        messagebox.showinfo('Solution', "The answer is: " + str(ans) + '.')
 
     btn = Button(addGame, text='Enter', command=ans)
     btn.grid(column=0, row=3)
