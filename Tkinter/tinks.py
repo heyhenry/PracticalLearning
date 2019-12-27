@@ -184,3 +184,62 @@
 # # from os import path
 # # file = filedialog.askopenfilename(initialdir= path.dirname(__file__))
 
+
+# # Menu Bar Widget
+# from tkinter import *
+# from tkinter import Menu
+# from tkinter import messagebox
+#
+# window = Tk()
+# window.title('Welcome to Tink4Fun app')
+# menu = Menu(window)
+# new_item = Menu(menu)
+# second_item = Menu(menu, tearoff=0)
+#
+# menu.add_cascade(label='File', menu=new_item)
+# menu.add_cascade(label='Git', menu=second_item)
+#
+#
+# def clicked():
+#     messagebox.showinfo('Push', 'You have successfully pushed your python file.')
+#
+# new_item.add_command(label='New')
+# new_item.add_separator()
+# new_item.add_command(label='Edit')
+# new_item.add_separator()
+#
+# second_item.add_separator()
+# second_item.add_command(label='Push', command=clicked)
+# second_item.add_separator()
+# second_item.add_command(label='Pull')
+# second_item.add_separator()
+# second_item.add_command(label='Commit')
+# second_item.add_separator()
+#
+# window.config(menu=menu)
+#
+# window.mainloop()
+
+
+# # Notebook Widget
+# from tkinter import *
+# from tkinter import ttk
+#
+# window = Tk()
+# window.title('Welcome to Tinks4Fun app')
+#
+# tab_control = ttk.Notebook(window)
+#
+# tab1 = ttk.Frame(tab_control)
+# tab2 = ttk.Frame(tab_control)
+# tab_control.add(tab1, text='First')
+# tab_control.add(tab2, text='Second')
+#
+# lbl1 = Label(tab1, text='Label 1', padx=5, pady=5)
+# lbl1.grid(column=0, row=0)
+# lbl2 = Label(tab2, text='Label 2')
+# lbl2.grid(column=0, row=0)
+#
+# tab_control.pack(expand=1, fill='both')
+
+window.mainloop()
