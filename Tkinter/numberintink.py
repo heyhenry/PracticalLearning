@@ -15,7 +15,7 @@ def Addition():
     window.withdraw()
     global addGame
     addGame = Tk()
-    window.title("Addition Game")
+    addGame.title("Addition Game")
     addGame.geometry('500x500')
     intro = Label(addGame, text="Let's add two numbers together.", font=("Lucida Console", 10))
     intro.grid(column=0, row=0)
