@@ -242,4 +242,4 @@
 #
 # tab_control.pack(expand=1, fill='both')
 
-window.mainloop()
+# window.mainloop()
