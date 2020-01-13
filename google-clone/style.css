@@ -1,0 +1,29 @@
+.google-title {
+    position: relative;
+    left: 800px;
+    top: 250px;
+}
+
+.google-searchbar {
+    position: relative;
+    left: 375px;
+    top: 330px;
+}
+
+.google-buttons {
+    position: relative;
+    right: 80px;
+    top: 380px;
+}
+
+.google-navbar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.google-footer {
+    position: absolute;
+    top: 898px;
+    right: 1px;
+}
